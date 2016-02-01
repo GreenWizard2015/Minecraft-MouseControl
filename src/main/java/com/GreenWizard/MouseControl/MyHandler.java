@@ -47,8 +47,8 @@ public class MyHandler {
 				return;
 
 			EntityClientPlayerMP player = client.thePlayer;
-			Boolean needJump = false;
-			if (player.onGround || player.isInWater())
+			Boolean needJump = player.isInWater(); // always jump in water
+			if (player.onGround)
 				if (player.isCollidedHorizontally && !player.isOnLadder())
 					needJump = true;
 			setJumping(needJump);
