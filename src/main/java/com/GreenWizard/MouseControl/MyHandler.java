@@ -69,7 +69,7 @@ public class MyHandler {
 
 				switch (LA.typeOfHit) {
 				case BLOCK:
-					if (!client.theWorld.canMineBlock(client.thePlayer, LA.blockX, LA.blockY, LA.blockZ))
+					if (client.theWorld.canMineBlock(client.thePlayer, LA.blockX, LA.blockY, LA.blockZ))
 						break;
 				case MISS:
 					setRunningMode(true);
